@@ -3,8 +3,8 @@
   "name": "rkram-portfolio",
   "compatibility_date": "2026-11-06",
   "assets": {
-    "directory": "dist/rkram-portfolio",
-    "not_found_handling": "single-page-application"
+    "directory": "dist/rkram-portfolio/browser",
+    "not_found_handling": "404-page"
   },
   "workers_dev": true,
   "preview_urls": true,
