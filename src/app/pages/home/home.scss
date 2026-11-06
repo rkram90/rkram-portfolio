@@ -1,0 +1,91 @@
+@use 'styles/breakpoints' as bp;
+
+.hero {
+  padding-block: var(--space-6) var(--space-5);
+
+  @include bp.up(md) {
+    padding-block: var(--space-8) var(--space-6);
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.headline {
+  margin: var(--space-1) 0 0;
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1vw + 1rem, 1.375rem);
+  font-weight: 600;
+}
+
+.summary {
+  max-inline-size: 60ch;
+  font-size: 1.125rem;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block: var(--space-3);
+}
+
+.where {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.cards {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include bp.up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include bp.up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.more {
+  font-weight: 600;
+}
+
+.industries {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact {
+  margin-block: var(--space-6);
+  padding: var(--space-5) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: center;
+
+  p {
+    margin-inline: auto; // center the 70ch-capped box from _base.scss
+  }
+
+  h2 {
+    margin: 0;
+  }
+}

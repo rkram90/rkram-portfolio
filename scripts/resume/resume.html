@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ramkumar Karuppaiah — Résumé</title>
+<!-- Public résumé: no phone, address, DOB or client names (see docs 02). Build: npm run resume -->
+<style>
+  @page { size: A4; margin: 15mm 17mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 10pt/1.4 "Segoe UI", Arial, sans-serif; color: #1f2933; }
+  a { color: inherit; text-decoration: none; }
+  h1 { margin: 0; font-size: 21pt; letter-spacing: .5px; }
+  .headline { margin: 2px 0 4px; color: #1d4ed8; font-weight: 600; font-size: 11pt; }
+  .contact { margin: 0; font-size: 9.5pt; color: #52606d; }
+  h2 { margin: 12px 0 5px; padding-bottom: 2px; border-bottom: 1.5px solid #1d4ed8;
+       color: #1d4ed8; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1px; }
+  p { margin: 0; }
+  ul { margin: 2px 0 0; padding-left: 15px; }
+  li { margin: 1px 0; }
+  .row { display: flex; justify-content: space-between; gap: 12px; }
+  .job { margin-top: 7px; }
+  .job > .row, h2 { break-after: avoid; }
+  .job h3 { margin: 0; font-size: 10.5pt; }
+  .meta { color: #52606d; font-size: 9.5pt; white-space: nowrap; }
+  .eng { margin-top: 5px; break-inside: avoid; }
+  .eng h4 { margin: 0; font-size: 10pt; font-weight: 600; }
+  .eng h4 span { font-weight: 400; color: #52606d; }
+  .stack { color: #52606d; font-size: 9pt; }
+  .skills p { margin: 1px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Ramkumar Karuppaiah</h1>
+  <p class="headline">Technology Lead · Angular Specialist · Full-Stack (.NET &amp; Node.js)</p>
+  <p class="contact">Tamil Nadu, India (open to remote) · <a href="mailto:rkram90be@gmail.com">rkram90be@gmail.com</a> · <a href="https://www.linkedin.com/in/rkram90be/">linkedin.com/in/rkram90be</a> · <a href="https://github.com/rkram90">github.com/rkram90</a> · <a href="https://rkram-portfolio.pages.dev">rkram-portfolio.pages.dev</a></p>
+</header>
+
+<h2>Summary</h2>
+<p>Technology Lead with 13+ years in web engineering and 8+ years in Angular, building enterprise front ends for airlines and telecoms. Leads onshore/offshore teams from requirements to release and production support. Experienced in micro-frontends, real-time and event-driven platforms on AWS, and full-stack delivery with .NET and Node.js.</p>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><strong>Frontend:</strong> Angular (8–19), TypeScript, RxJS, NgRx, Angular Material, AG-Grid, HTML5, CSS3/SASS, JavaScript</p>
+  <p><strong>Backend:</strong> .NET 8 (C#), Node.js (Hapi.js), REST APIs &amp; microservices, GraphQL, Spring Boot, Java, PHP</p>
+  <p><strong>Cloud &amp; DevOps:</strong> AWS (S3, Lambda, EventBridge, SNS, SQS, EC2, IAM), Docker, Jenkins, GitLab CI/CD, Azure DevOps, Git</p>
+  <p><strong>Architecture:</strong> Micro-frontends (Webpack Module Federation), Nx monorepos, SignalR real-time, event-driven workflows</p>
+  <p><strong>Quality &amp; Observability:</strong> Vitest, Jasmine, Cypress, xUnit, SonarQube, Dynatrace, Datadog, Splunk, Kibana, accessibility (WCAG)</p>
+  <p><strong>Data &amp; Platforms:</strong> MySQL, MongoDB, DuckDB, Adobe Experience Manager, Magnolia CMS, Magento, WordPress</p>
+</div>
+
+<h2>Experience</h2>
+
+<section class="job">
+  <div class="row"><h3>Infosys — Technology Lead (2022–now), Technology Analyst (2018–2021)</h3><span class="meta">Feb 2018 – Present · Chennai</span></div>
+
+  <div class="eng">
+    <div class="row"><h4>Airline Reservations Platform <span>— major US airline · Technology Lead</span></h4><span class="meta">May 2025 – Present</span></div>
+    <ul>
+      <li>Lead an onshore/offshore team building the Angular 19 + .NET 8 front end that replaces a legacy reservation system used by call-center agents.</li>
+      <li>Delivered the federal excise tax module end to end for domestic ancillary purchases (unaccompanied-minor fees, mileage purchases, bundles).</li>
+      <li>Led the digital menus feature that lets agents personalize meals for upcoming flights.</li>
+      <li>Own code reviews and production support, using Dynatrace, Quantum Metric and Kibana for root-cause analysis.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="row"><h4>Fare Automation Platform <span>— major US airline · Technology Lead</span></h4><span class="meta">May 2024 – Apr 2025</span></div>
+    <ul>
+      <li>Led delivery of a self-service fare calculation platform built on industry fare standards, replacing manual, slow processes.</li>
+      <li>Built a real-time workflow UI with Angular 16, NgRx and AG-Grid, pushing live status to users over SignalR.</li>
+      <li>Queried Parquet data directly from S3 with DuckDB; orchestrated processing with EventBridge, Python Lambda, SNS and SQS.</li>
+      <li>Raised Angular unit-test coverage to 90%, enforced by SonarQube quality gates; monitored with Datadog and Dynatrace.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="row"><h4>Telecom Platform Modernization <span>— European telecom provider · Technology Lead</span></h4><span class="meta">Jan 2023 – Apr 2024</span></div>
+    <ul>
+      <li>Designed a micro-frontend architecture of independently deployable Angular 14 apps with Webpack Module Federation to bring an acquired brand into the central platform.</li>
+      <li>Integrated GraphQL APIs, Node.js/Spring Boot services and Magnolia CMS content; led design, reviews, testing and releases.</li>
+      <li>Validated accessibility compliance and monitored production with Splunk.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="row"><h4>Customer Self-Service Portal <span>— US wireless carrier · Technology Analyst → Lead</span></h4><span class="meta">Mar 2020 – Dec 2022</span></div>
+    <ul>
+      <li>Built the customer portal for usage, billing, plan changes, chat and online shopping in Angular (Nx, NgRx) integrated with AEM 6.5 components.</li>
+      <li>Built a Hapi.js backend-for-frontend that shapes external REST data for the UI; shipped through GitLab CI/CD and Docker.</li>
+      <li>Promoted to Technology Lead in 2022; led the offshore team technically and ran front-end code reviews.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="row"><h4>Venue Booking App <span>— US media &amp; cable company · Technology Analyst</span></h4><span class="meta">Nov 2019 – Feb 2020</span></div>
+    <ul>
+      <li>Built individual and group booking with calendar time slots, QR-code tickets, My Bookings, multilingual support and consent-management integration.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="row"><h4>B2B Account Portal <span>— US wireless carrier · Technology Analyst</span></h4><span class="meta">Feb 2018 – Oct 2019</span></div>
+    <ul>
+      <li>Produced high- and low-level designs and prototypes for a business self-service portal (profiles, billing, payments, orders); built accessibility-compliant pages and supported go-live.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="job">
+  <div class="row"><h3>Programmer Analyst — Tychons Solution</h3><span class="meta">Jan 2016 – Nov 2017 · Chennai</span></div>
+  <ul><li>Turned static designs into dynamic sites with Magento, WordPress and CodeIgniter; tested and deployed to Apache and Nginx.</li></ul>
+</section>
+
+<section class="job">
+  <div class="row"><h3>Software Engineer — IndiaProperty Online</h3><span class="meta">Mar 2014 – Dec 2015 · Chennai</span></div>
+  <ul><li>Built core libraries for mailer-template generation and search; made the home module faster and more reliable.</li></ul>
+</section>
+
+<section class="job">
+  <div class="row"><h3>PHP Developer — Spider Infomedia</h3><span class="meta">Jan 2013 – Mar 2014 · Chennai</span></div>
+  <ul><li>Developed web applications with CodeIgniter and MySQL.</li></ul>
+</section>
+
+<h2>Certifications</h2>
+<ul>
+  <li>Adobe Experience Manager: Develop Websites and Components; Extend and Customize AEM</li>
+  <li>Web Component Development using Java Technologies</li>
+  <li>Claude Certified Architect Foundations (Udemy)</li>
+  <li>Infosys Certified Angular Professional · Front End Web Developer · Global Agile Developer</li>
+</ul>
+
+<h2>Education</h2>
+<div class="row"><p><strong>Bachelor of Engineering, Computer Science and Engineering</strong></p><span class="meta">2012</span></div>
+</body>
+</html>

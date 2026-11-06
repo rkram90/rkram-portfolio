@@ -1,0 +1,74 @@
+@use 'styles/breakpoints' as bp;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-block: var(--space-6) var(--space-3);
+
+  @include bp.up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  img {
+    border-radius: 50%;
+    border: 2px solid var(--border);
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.summary,
+.story {
+  max-inline-size: 65ch;
+}
+
+.summary {
+  margin: var(--space-1) 0 0;
+  font-size: 1.125rem;
+}
+
+.how {
+  max-inline-size: 65ch;
+  padding-inline-start: 1.25rem;
+
+  li + li {
+    margin-block-start: var(--space-1);
+  }
+}
+
+.chips,
+.beyond {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.beyond {
+  flex-direction: column;
+  font-size: 1.125rem;
+
+  li {
+    display: flex;
+    gap: var(--space-1);
+    align-items: center;
+  }
+
+  svg {
+    flex: none;
+    color: var(--primary);
+  }
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block: var(--space-6);
+}

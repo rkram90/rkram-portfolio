@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvh;
+}
+
+main {
+  flex: 1;
+  inline-size: 100%; // auto margins on .container disable flex stretch; without this main grows past narrow viewports
+  padding-block: var(--space-6) 0;
+
+  &:focus {
+    outline: none;
+  }
+}

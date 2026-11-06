@@ -1,0 +1,23 @@
+@use 'styles/breakpoints' as bp;
+
+:host {
+  display: block;
+  padding-block: var(--space-6);
+
+  @include bp.up(md) {
+    padding-block: var(--space-8);
+  }
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-1);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 var(--space-3);
+}

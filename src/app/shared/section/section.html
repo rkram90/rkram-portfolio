@@ -1,0 +1,7 @@
+<section [attr.aria-labelledby]="headingId()">
+  @if (eyebrow(); as e) {
+    <p class="eyebrow">{{ e }}</p>
+  }
+  <h2 [id]="headingId()">{{ heading() }}</h2>
+  <ng-content />
+</section>

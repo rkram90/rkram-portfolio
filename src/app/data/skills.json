@@ -1,0 +1,69 @@
+[
+  {
+    "id": "frontend",
+    "label": "Frontend",
+    "skills": [
+      { "name": "Angular", "years": 8, "core": true },
+      { "name": "TypeScript", "years": 8, "core": true },
+      { "name": "RxJS", "years": 5, "core": true },
+      { "name": "HTML, CSS & JavaScript", "years": 9 },
+      { "name": "NgRx", "years": 4 },
+      { "name": "Angular Material" },
+      { "name": "AG-Grid" },
+      { "name": "React" }
+    ]
+  },
+  {
+    "id": "backend",
+    "label": "Backend",
+    "skills": [
+      { "name": ".NET", "years": 3, "core": true },
+      { "name": "Node.js", "years": 2, "core": true },
+      { "name": "Microservices & REST APIs", "years": 5 },
+      { "name": "GraphQL", "years": 1 },
+      { "name": "Java", "years": 3 },
+      { "name": "PHP", "years": 3 }
+    ]
+  },
+  {
+    "id": "cloud-devops",
+    "label": "Cloud & DevOps",
+    "skills": [
+      { "name": "AWS", "years": 4, "core": true },
+      { "name": "Docker" },
+      { "name": "GitLab CI/CD" },
+      { "name": "Jenkins" },
+      { "name": "Git", "years": 7 }
+    ]
+  },
+  {
+    "id": "data",
+    "label": "Data",
+    "skills": [
+      { "name": "MySQL", "years": 5 },
+      { "name": "MongoDB", "years": 2 },
+      { "name": "DuckDB" }
+    ]
+  },
+  {
+    "id": "quality",
+    "label": "Quality",
+    "skills": [{ "name": "Vitest" }, { "name": "Jasmine" }, { "name": "Cypress" }, { "name": "xUnit" }, { "name": "SonarQube" }]
+  },
+  {
+    "id": "observability",
+    "label": "Observability",
+    "skills": [{ "name": "Dynatrace", "years": 3 }, { "name": "Datadog" }, { "name": "Splunk" }]
+  },
+  {
+    "id": "platforms",
+    "label": "Platforms",
+    "skills": [
+      { "name": "AEM", "years": 2 },
+      { "name": "Magnolia" },
+      { "name": "Magento" },
+      { "name": "WordPress" },
+      { "name": "Digital commerce platforms", "years": 6 }
+    ]
+  }
+]

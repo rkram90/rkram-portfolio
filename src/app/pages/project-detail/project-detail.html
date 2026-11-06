@@ -1,0 +1,77 @@
+@if (project(); as p) {
+  <nav aria-label="Breadcrumb" class="crumbs">
+    <ol>
+      <li><a routerLink="/projects">Projects</a></li>
+      <li aria-current="page">{{ p.title }}</li>
+    </ol>
+  </nav>
+
+  <header class="head">
+    <h1>{{ p.title }}</h1>
+    <p class="tagline">{{ p.tagline }}</p>
+    <p class="meta">
+      @if (p.client) {
+        {{ p.client }} ·
+      }
+      {{ p.role }} · {{ p.start | ymRange: p.end }}
+    </p>
+    <ul class="chips" aria-label="Tech used">
+      @for (t of p.tech; track t) {
+        <li><app-chip [version]="p.versions?.[t]">{{ t }}</app-chip></li>
+      }
+    </ul>
+  </header>
+
+  <section aria-labelledby="problem">
+    <h2 id="problem">Problem</h2>
+    <p>{{ p.problem }}</p>
+  </section>
+
+  <section aria-labelledby="approach">
+    <h2 id="approach">Approach</h2>
+    <ul>
+      @for (a of p.approach; track $index) {
+        <li>{{ a }}</li>
+      }
+    </ul>
+  </section>
+
+  <section aria-labelledby="outcomes">
+    <h2 id="outcomes">Outcomes</h2>
+    @if (metrics().length) {
+      <app-stats [stats]="metrics()" />
+    }
+    @if (notes().length) {
+      <ul>
+        @for (o of notes(); track $index) {
+          <li>{{ o.text }}</li>
+        }
+      </ul>
+    }
+  </section>
+
+  @if (p.type === 'personal' && (p.links?.demo || p.links?.repo)) {
+    <section aria-labelledby="links">
+      <h2 id="links">Links</h2>
+      <ul class="links">
+        @if (p.links?.demo; as demo) {
+          <li><a [href]="demo" rel="noopener" target="_blank">Live demo</a></li>
+        }
+        @if (p.links?.repo; as repo) {
+          <li><a [href]="repo" rel="noopener" target="_blank">Repository</a></li>
+        }
+      </ul>
+    </section>
+  }
+
+  <nav aria-label="More projects" class="pager">
+    @if (prev(); as pr) {
+      <a [routerLink]="['/projects', pr.slug]" rel="prev">← {{ pr.title }}</a>
+    } @else {
+      <span></span>
+    }
+    @if (next(); as nx) {
+      <a [routerLink]="['/projects', nx.slug]" rel="next">{{ nx.title }} →</a>
+    }
+  </nav>
+}

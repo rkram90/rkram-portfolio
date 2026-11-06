@@ -1,0 +1,15 @@
+@let p = project();
+<article class="card">
+  <h3>
+    <a [routerLink]="['/projects', p.slug]">{{ p.title }}</a>
+  </h3>
+  @if (p.client; as client) {
+    <p class="client">{{ client }}</p>
+  }
+  <p class="tagline">{{ p.tagline }}</p>
+  <ul class="chips" aria-label="Tech used">
+    @for (t of p.tech; track t) {
+      <li><app-chip [version]="p.versions?.[t]">{{ t }}</app-chip></li>
+    }
+  </ul>
+</article>

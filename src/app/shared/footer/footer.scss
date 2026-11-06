@@ -1,0 +1,12 @@
+.site-footer {
+  margin-block-start: var(--space-8);
+  padding-block: var(--space-4);
+  border-block-start: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  text-align: center;
+
+  p {
+    margin: 0 auto; // center the 70ch-capped box from _base.scss
+  }
+}

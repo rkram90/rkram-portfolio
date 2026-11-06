@@ -1,0 +1,8 @@
+<dl>
+  @for (s of stats(); track s.label) {
+    <div>
+      <dt>{{ s.label }}</dt>
+      <dd>{{ s.value }}</dd>
+    </div>
+  }
+</dl>

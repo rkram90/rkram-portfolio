@@ -1,0 +1,36 @@
+<h1>Projects</h1>
+<p class="intro">Enterprise front ends for airlines and telecoms, plus things I build on my own time. Client names are confidential.</p>
+
+<div class="filters" role="group" aria-label="Filter projects">
+  <div class="row" role="group" aria-label="Project type">
+    @for (t of types; track t.value) {
+      <button type="button" class="toggle" [attr.aria-pressed]="type() === t.value" (click)="setType(t.value)">
+        <app-chip>{{ t.label }}</app-chip>
+      </button>
+    }
+  </div>
+  <div class="row" role="group" aria-label="Tech">
+    @for (t of content.allTech(); track t) {
+      <button type="button" class="toggle" [attr.aria-pressed]="selectedTech().has(t)" (click)="toggleTech(t)">
+        <app-chip>{{ t }}</app-chip>
+      </button>
+    }
+  </div>
+</div>
+
+<p class="count" aria-live="polite">
+  {{ visible().length }} {{ visible().length === 1 ? 'project' : 'projects' }}
+  @if (filtered()) {
+    · <button type="button" class="link" (click)="clear()">Clear filters</button>
+  }
+</p>
+
+@if (visible().length) {
+  <ul class="cards">
+    @for (p of visible(); track p.slug) {
+      <li><app-project-card [project]="p" /></li>
+    }
+  </ul>
+} @else {
+  <p class="empty">No projects match these filters — <button type="button" class="link" (click)="clear()">Clear filters</button></p>
+}

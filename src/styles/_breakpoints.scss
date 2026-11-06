@@ -1,0 +1,12 @@
+// Mobile-first breakpoints (see docs 06-responsive-design.md)
+$bp: (
+  sm: 640px,
+  md: 960px,
+  lg: 1200px,
+);
+
+@mixin up($key) {
+  @media (min-width: map-get($bp, $key)) {
+    @content;
+  }
+}

@@ -1,0 +1,179 @@
+@use 'styles/breakpoints' as bp;
+
+// Track sits in a left gutter on mobile and in a center column (1fr | 4rem | 2fr) from md up.
+:host {
+  --gutter: 2.5rem;
+  --track-x: calc(var(--gutter) / 2);
+  display: block;
+
+  @include bp.up(md) {
+    --gutter: 4rem;
+    --track-x: calc((100% - var(--gutter)) / 3 + var(--gutter) / 2);
+  }
+}
+
+.timeline {
+  position: relative;
+}
+
+.track {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: var(--track-x);
+  inline-size: 2px;
+  margin-inline-start: -1px;
+  background: var(--border);
+}
+
+// Filled segment below the marker = career before the current point.
+.fill,
+.marker {
+  display: none;
+}
+
+:host-context(.js) {
+  .fill {
+    display: block;
+    position: absolute;
+    inset-inline: 0;
+    inset-block: var(--marker-y, 0) 0;
+    background: var(--primary);
+  }
+
+  // Fixed size: inside the 2px track an auto-sized box would shrink the photo to a dot.
+  .marker {
+    display: block;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 50%;
+    z-index: 2;
+    inline-size: 44px;
+    block-size: 44px;
+    transform: translate(-50%, calc(var(--marker-y, 0px) - 50%));
+  }
+}
+
+.marker img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: none; // opt out of the global img reset
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  background: var(--surface);
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: var(--gutter) 1fr;
+  grid-template-areas:
+    'node meta'
+    'node body';
+  padding-block: var(--space-4);
+
+  @include bp.up(md) {
+    grid-template-columns: 1fr var(--gutter) 2fr;
+    grid-template-areas: 'meta node body';
+  }
+}
+
+.meta {
+  grid-area: meta;
+
+  @include bp.up(md) {
+    text-align: end;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: var(--fs-h3);
+  }
+
+  p {
+    margin: 0.25rem 0 0;
+  }
+}
+
+.node {
+  grid-area: node;
+  justify-self: center;
+  inline-size: 14px;
+  block-size: 14px;
+  margin-block-start: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  background: var(--surface);
+  position: relative;
+  z-index: 1;
+}
+
+.body {
+  grid-area: body;
+  min-inline-size: 0;
+}
+
+.dates,
+.location,
+.muted {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.titles {
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  list-style: none;
+
+  @include bp.up(md) {
+    margin-block-start: 0;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 var(--space-1);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+}
+
+.engagement {
+  margin-block-end: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+
+  summary {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .name {
+    font-weight: 600;
+  }
+}
+
+.roles {
+  font-size: var(--fs-small);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: 0;
+  list-style: none;
+}

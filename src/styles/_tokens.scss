@@ -1,0 +1,54 @@
+// Design tokens (see docs 01-design-system.md)
+:root {
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --fs-body: 1rem;
+  --fs-h1: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+  --fs-h2: clamp(1.75rem, 2vw + 1rem, 2rem);
+  --fs-h3: 1.5rem;
+  --fs-small: 0.875rem;
+  --lh-body: 1.65;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-7: 3.5rem;
+  --space-8: 4rem;
+
+  --container: 1120px;
+  --radius: 12px;
+  --radius-pill: 999px;
+  --shadow-hover: 0 4px 20px rgb(0 0 0 / 0.08);
+  --header-height: 4rem;
+  --transition: 200ms ease;
+}
+
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --primary: #0f766e;
+  --primary-contrast: #ffffff;
+  --accent: #d97706;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0b1120;
+  --surface: #111827;
+  --border: #1f2937;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --primary: #2dd4bf;
+  --primary-contrast: #042f2e;
+  --accent: #fbbf24;
+}

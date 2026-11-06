@@ -1,0 +1,57 @@
+<section class="intro" aria-labelledby="about-title">
+  <img src="/images/profile-photo-192.webp" width="96" height="96" [alt]="'Portrait of ' + profile.name" />
+  <div>
+    <h1 id="about-title">About</h1>
+    <p class="summary">{{ content.summary() }}</p>
+  </div>
+</section>
+
+<app-section heading="My story" headingId="story">
+  @for (p of profile.about; track $index) {
+    <p class="story">{{ p }}</p>
+  }
+</app-section>
+
+<app-section heading="How I work" headingId="how">
+  <ul class="how">
+    @for (item of howIWork; track item) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+</app-section>
+
+<app-section heading="What I'm looking for" headingId="looking">
+  <ul class="chips open-to">
+    @for (o of profile.openTo; track o) {
+      <li><app-chip>{{ o }}</app-chip></li>
+    }
+  </ul>
+</app-section>
+
+<app-section heading="Currently learning" headingId="learning">
+  <ul class="chips learning">
+    @for (l of learning; track l) {
+      <li><app-chip>{{ l }}</app-chip></li>
+    }
+  </ul>
+</app-section>
+
+<app-section heading="Beyond work" headingId="beyond">
+  <ul class="beyond">
+    @for (line of profile.beyondWork; track $index) {
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+          <path d="M5 21c0-9 6-15 15-16-1 9-7 15-15 16Zm0 0 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {{ line }}
+      </li>
+    }
+  </ul>
+</app-section>
+
+<div class="ctas">
+  @if (profile.links.resumePdf; as pdf) {
+    <a [href]="pdf" appButton download>Download resume (PDF)</a>
+  }
+  <a routerLink="/contact" appButton="ghost">Get in touch</a>
+</div>

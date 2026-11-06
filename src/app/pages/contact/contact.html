@@ -1,0 +1,76 @@
+<h1>Contact</h1>
+<p class="intro">Open to {{ profile.openTo.join(' · ') }} roles. Send a message or reach me directly.</p>
+
+<div class="layout">
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate aria-label="Contact form">
+    <div class="field">
+      <label for="c-name">Name</label>
+      <input id="c-name" formControlName="name" autocomplete="name" [attr.aria-invalid]="invalid('name')"
+        [attr.aria-describedby]="invalid('name') ? 'c-name-err' : null" />
+      @if (invalid('name')) {
+        <p id="c-name-err" class="error">Please enter your name (at least 2 characters).</p>
+      }
+    </div>
+
+    <div class="field">
+      <label for="c-email">Email</label>
+      <input id="c-email" type="email" formControlName="email" autocomplete="email" [attr.aria-invalid]="invalid('email')"
+        [attr.aria-describedby]="invalid('email') ? 'c-email-err' : null" />
+      @if (invalid('email')) {
+        <p id="c-email-err" class="error">Please enter a valid email address.</p>
+      }
+    </div>
+
+    <div class="field">
+      <label for="c-subject">Subject <span class="optional">(optional)</span></label>
+      <input id="c-subject" formControlName="subject" />
+    </div>
+
+    <div class="field">
+      <label for="c-message">Message</label>
+      <textarea id="c-message" rows="6" formControlName="message" [attr.aria-invalid]="invalid('message')"
+        [attr.aria-describedby]="invalid('message') ? 'c-message-err' : null"></textarea>
+      @if (invalid('message')) {
+        <p id="c-message-err" class="error">Please write between 20 and 2000 characters.</p>
+      }
+    </div>
+
+    <div class="honeypot" aria-hidden="true">
+      <label for="c-gotcha">Leave this empty</label>
+      <input id="c-gotcha" formControlName="_gotcha" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <button type="submit" appButton [disabled]="status() === 'submitting'">
+      {{ status() === 'submitting' ? 'Sending…' : 'Send message' }}
+    </button>
+
+    <div #statusRegion class="status" tabindex="-1" aria-live="polite">
+      @switch (status()) {
+        @case ('success') {
+          <p class="ok">Thanks — I'll reply within 2 business days.</p>
+        }
+        @case ('error') {
+          <p class="error">
+            Sorry, the message couldn't be sent. Please email me at
+            <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>.
+          </p>
+        }
+      }
+    </div>
+  </form>
+
+  <aside aria-labelledby="direct">
+    <h2 id="direct">Direct</h2>
+    <ul class="links">
+      <li><a [href]="'mailto:' + profile.email">{{ profile.email }}</a></li>
+      <li><a [href]="profile.links.linkedin" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in new tab)</span></a></li>
+      <li><a [href]="profile.links.github" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> (opens in new tab)</span></a></li>
+      @if (profile.links.blog; as blog) {
+        <li><a [href]="blog" target="_blank" rel="noopener">Blog<span class="visually-hidden"> (opens in new tab)</span></a></li>
+      }
+      @if (profile.links.resumePdf; as pdf) {
+        <li><a [href]="pdf" download>Resume (PDF)</a></li>
+      }
+    </ul>
+  </aside>
+</div>

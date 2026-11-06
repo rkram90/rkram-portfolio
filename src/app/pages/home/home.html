@@ -1,0 +1,41 @@
+<section class="hero" aria-labelledby="hero-name">
+  <h1 id="hero-name">{{ profile.name }}</h1>
+  <p class="headline">{{ profile.headline }}</p>
+  <p class="summary">{{ content.summary() }}</p>
+  <div class="ctas">
+    <a routerLink="/projects" appButton>View projects</a>
+    @if (profile.links.resumePdf; as pdf) {
+      <a [href]="pdf" appButton="ghost" download>Download resume (PDF)</a>
+    }
+  </div>
+  <p class="where">{{ profile.location }} · Open to {{ profile.openTo[0].toLowerCase() }}</p>
+</section>
+
+<app-stats [stats]="content.stats()" />
+
+<app-section heading="Featured projects" headingId="featured" eyebrow="Selected work">
+  <ul class="cards">
+    @for (p of content.featured(); track p.slug) {
+      <li><app-project-card [project]="p" /></li>
+    }
+  </ul>
+  <p><a routerLink="/projects" class="more">All projects →</a></p>
+</app-section>
+
+<app-section heading="Industries served" headingId="industries">
+  <p class="industries">{{ industries }}</p>
+</app-section>
+
+<app-section heading="Core stack" headingId="stack">
+  <ul class="chips stack">
+    @for (s of content.coreSkills(); track s) {
+      <li><app-chip>{{ s }}</app-chip></li>
+    }
+  </ul>
+</app-section>
+
+<section class="contact" aria-labelledby="contact-cta">
+  <h2 id="contact-cta">Let's build something</h2>
+  <p>Hiring for a Tech Lead or senior Angular role? I'd like to hear about it.</p>
+  <a routerLink="/contact" appButton>Get in touch</a>
+</section>

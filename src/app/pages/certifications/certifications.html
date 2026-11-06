@@ -1,0 +1,49 @@
+<h1>Certifications &amp; Education</h1>
+
+<app-section heading="Certifications" headingId="certs">
+  <ul class="cards">
+    @for (c of credentials.certifications; track c.name) {
+      <li class="card">
+        <h3>{{ c.name }}</h3>
+        <p class="meta">
+          {{ c.issuer }}
+          @if (c.year) {
+            · {{ c.year }}
+          }
+        </p>
+        @if (c.url) {
+          <a [href]="c.url" target="_blank" rel="noopener">Verify ↗<span class="visually-hidden"> (opens in new tab)</span></a>
+        }
+      </li>
+    }
+  </ul>
+</app-section>
+
+<app-section heading="Courses" headingId="courses">
+  <ul class="plain">
+    @for (c of credentials.courses; track c.name) {
+      <li>
+        <strong>{{ c.name }}</strong><span class="meta">&#32;— {{ meta(c.provider, c.year) }}</span>
+      </li>
+    }
+  </ul>
+</app-section>
+
+<app-section heading="Education" headingId="education">
+  <ul class="plain">
+    @for (e of credentials.education; track e.degree) {
+      <li>
+        <strong>{{ e.degree }}, {{ e.field }}</strong>
+        <span class="meta">&#32;— {{ meta(e.institution, e.year) }}</span>
+      </li>
+    }
+  </ul>
+</app-section>
+
+<app-section heading="Training" headingId="training">
+  <ul class="chips">
+    @for (t of credentials.training; track t.topic) {
+      <li><app-chip>{{ t.topic }}</app-chip></li>
+    }
+  </ul>
+</app-section>

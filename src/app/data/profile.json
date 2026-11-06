@@ -1,0 +1,43 @@
+{
+  "name": "Ramkumar Karuppaiah",
+  "headline": "Technology Lead · Angular Specialist · Full-Stack (.NET & Node.js)",
+  "summary": "Technology Lead with {years} years in web engineering and {angularYears}+ in Angular, building enterprise front-ends for airlines and telecoms.",
+  "about": [
+    "I started in 2013 building PHP sites in Chennai startups — CodeIgniter, WordPress and Magento — where I learned to ship fast, deploy my own code and keep pages quick.",
+    "In 2018 I joined Infosys and moved to Angular, building enterprise self-service portals for US wireless and media companies, integrating AEM, and making accessibility a default rather than an afterthought.",
+    "Since 2022 I have led onshore/offshore teams as a Technology Lead: micro-frontends for a European telecom, an event-driven fare platform and a reservations modernization for a major US airline, increasingly full stack with .NET and Node.js."
+  ],
+  "location": "Tamil Nadu, India",
+  "openTo": [
+    "Remote",
+    "Tech Lead",
+    "Senior Frontend / Full-Stack"
+  ],
+  "beyondWork": [
+    "Nature lover at heart, farmer by hand, social worker by choice.",
+    "Growing food, caring for the earth, and serving people — one day at a time."
+  ],
+  "careerStart": "2013-01",
+  "angularStart": "2018-02",
+  "email": "rkram90be@gmail.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/rkram90be/",
+    "github": "https://github.com/rkram90",
+    "blog": "https://rkramblog.wordpress.com/",
+    "resumePdf": "/resume.pdf"
+  },
+  "stats": [
+    {
+      "value": "{years}+",
+      "label": "Years in web engineering"
+    },
+    {
+      "value": "{angularYears}+",
+      "label": "Years with Angular"
+    },
+    {
+      "value": "{clients}",
+      "label": "Enterprise clients"
+    }
+  ]
+}

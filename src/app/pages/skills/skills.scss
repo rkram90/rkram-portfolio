@@ -1,0 +1,70 @@
+@use 'styles/breakpoints' as bp;
+
+h1 {
+  margin-block: var(--space-6) 0;
+}
+
+.intro {
+  color: var(--text-muted);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-3);
+  margin-block: var(--space-4);
+
+  @include bp.up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include bp.up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.group {
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+
+  h2 {
+    margin: 0 0 var(--space-2);
+    font-size: var(--fs-h3);
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  // Long labels ("Digital commerce platforms · 6y") must wrap, or they widen the grid past 320px.
+  app-chip {
+    white-space: normal;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover app-chip,
+    &:focus-visible app-chip {
+      border-color: var(--primary);
+    }
+  }
+
+  .core app-chip {
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+  }
+}
+
+.more {
+  margin-block-end: var(--space-6);
+  font-weight: 600;
+}

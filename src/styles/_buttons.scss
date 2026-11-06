@@ -1,0 +1,44 @@
+// Button styles for the `appButton` directive (shared/button).
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-block-size: 44px;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-pill);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--primary);
+}
+
+@media (hover: hover) {
+  .btn--primary:hover {
+    background: color-mix(in srgb, var(--primary) 85%, var(--text));
+  }
+
+  .btn--ghost:hover {
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}

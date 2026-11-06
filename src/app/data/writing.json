@@ -1,0 +1,255 @@
+[
+  {
+    "title": "First-order vs Higher-order Observables",
+    "url": "https://rkramblog.wordpress.com/2023/10/01/first-order-observable-vs-higher-order-observables/",
+    "date": "2023-10",
+    "tags": [
+      "RxJS"
+    ],
+    "summary": "When an Observable emits Observables, and why flattening operators exist.",
+    "tier": "featured"
+  },
+  {
+    "title": "switchMap Operator",
+    "url": "https://rkramblog.wordpress.com/2023/10/15/switchmap-operator/",
+    "date": "2023-10",
+    "tags": [
+      "RxJS"
+    ],
+    "summary": "Cancel the previous inner Observable when a new value arrives — ideal for search-as-you-type.",
+    "tier": "featured"
+  },
+  {
+    "title": "exhaustMap Operator",
+    "url": "https://rkramblog.wordpress.com/2023/10/02/exhaustmap-operator-rxjs/",
+    "date": "2023-10",
+    "tags": [
+      "RxJS"
+    ],
+    "summary": "Ignore new values while an inner Observable is running — ideal for submit buttons.",
+    "tier": "featured"
+  },
+  {
+    "title": "NgRx Entities",
+    "url": "https://rkramblog.wordpress.com/2020/04/29/ngrx-entities/",
+    "date": "2020-04",
+    "tags": [
+      "Angular",
+      "NgRx"
+    ],
+    "summary": "Managing collections in NgRx state with entity adapters.",
+    "tier": "featured"
+  },
+  {
+    "title": "Unit Test in Angular",
+    "url": "https://rkramblog.wordpress.com/2019/11/24/unit-test-in-angular/",
+    "date": "2019-11",
+    "tags": [
+      "Angular",
+      "Jasmine"
+    ],
+    "summary": "Getting started with component unit tests in Angular.",
+    "tier": "featured"
+  },
+  {
+    "title": "CSS Grid",
+    "url": "https://rkramblog.wordpress.com/2024/08/04/css-grid/",
+    "date": "2024-08",
+    "tags": [
+      "CSS"
+    ],
+    "summary": "Two-dimensional layouts with CSS Grid.",
+    "tier": "featured"
+  },
+  {
+    "title": "What is React?",
+    "url": "https://rkramblog.wordpress.com/2023/08/06/what-is-reactjs/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "What is JSX?",
+    "url": "https://rkramblog.wordpress.com/2023/08/06/what-is-jsx/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Key rules for JSX",
+    "url": "https://rkramblog.wordpress.com/2023/08/06/key-rules-to-keep-in-mind-when-using-jsx/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Essentials of React components",
+    "url": "https://rkramblog.wordpress.com/2023/08/11/essential-things-to-know-about-react-components/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Controlled components",
+    "url": "https://rkramblog.wordpress.com/2023/08/19/controlled-component-in-react/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "CSS in React components",
+    "url": "https://rkramblog.wordpress.com/2023/08/19/how-to-use-css-effectively-in-react-components/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Batch updates",
+    "url": "https://rkramblog.wordpress.com/2023/08/24/batch-updates-in-react/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Side effects in functional components",
+    "url": "https://rkramblog.wordpress.com/2023/08/25/side-effects-in-functional-components/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Lifecycle methods in class components",
+    "url": "https://rkramblog.wordpress.com/2023/08/26/key-lifecycle-methods-in-class-components/",
+    "date": "2023-08",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Context",
+    "url": "https://rkramblog.wordpress.com/2023/10/16/context-in-reactjs/",
+    "date": "2023-10",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "useReducer",
+    "url": "https://rkramblog.wordpress.com/2023/10/16/reducer-in-react/",
+    "date": "2023-10",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "useRef",
+    "url": "https://rkramblog.wordpress.com/2023/10/24/useref-in-react/",
+    "date": "2023-10",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "useCallback",
+    "url": "https://rkramblog.wordpress.com/2023/10/24/usecallback-in-reactjs/",
+    "date": "2023-10",
+    "tags": [
+      "React"
+    ],
+    "tier": "series",
+    "series": "react-fundamentals"
+  },
+  {
+    "title": "Why we need webpack",
+    "url": "https://rkramblog.wordpress.com/2023/09/14/why-we-need-webpack/",
+    "date": "2023-09",
+    "tags": [
+      "Webpack"
+    ],
+    "tier": "more"
+  },
+  {
+    "title": "Web Service",
+    "url": "https://rkramblog.wordpress.com/2023/07/07/web-service/",
+    "date": "2023-07",
+    "tags": [],
+    "tier": "more"
+  },
+  {
+    "title": "is-a vs has-a",
+    "url": "https://rkramblog.wordpress.com/2023/07/06/is-a-vs-has-a/",
+    "date": "2023-07",
+    "tags": [
+      "Java"
+    ],
+    "tier": "more"
+  },
+  {
+    "title": "Collections in Java",
+    "url": "https://rkramblog.wordpress.com/2023/07/06/collections/",
+    "date": "2023-07",
+    "tags": [
+      "Java"
+    ],
+    "tier": "more"
+  },
+  {
+    "title": "About TypeScript",
+    "url": "https://rkramblog.wordpress.com/2023/05/06/about-typescript/",
+    "date": "2023-05",
+    "tags": [
+      "TypeScript"
+    ],
+    "tier": "more"
+  },
+  {
+    "title": "Core concepts and building blocks of RxJS",
+    "url": "https://rkramblog.wordpress.com/2019/10/17/core-concept-and-building-bocks-of-rxjs/",
+    "date": "2019-10",
+    "tags": [
+      "RxJS"
+    ],
+    "tier": "more"
+  },
+  {
+    "title": "Stop event propagation in JavaScript",
+    "url": "https://rkramblog.wordpress.com/2019/10/22/how-to-stop-propagation-or-bubbling-in-javascript/",
+    "date": "2019-10",
+    "tags": [
+      "JavaScript"
+    ],
+    "tier": "more"
+  }
+]

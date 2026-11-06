@@ -1,0 +1,141 @@
+@use 'styles/breakpoints' as bp;
+
+.site-header {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 50;
+  background: var(--surface);
+  border-block-end: 1px solid var(--border);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  min-block-size: var(--header-height);
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  margin-inline-end: auto;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-block-end: 2px solid transparent;
+
+  &.active {
+    color: var(--text);
+    border-block-end-color: var(--primary);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--text);
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+// Without JS (no .js class on <html>) the nav renders as a wrapped list and the menu button is hidden.
+.menu-toggle {
+  display: none;
+}
+
+:host-context(.js) {
+  .menu-toggle {
+    display: inline-grid;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-open .nav {
+    display: block;
+    position: fixed;
+    inset: var(--header-height) 0 0;
+    overflow-y: auto;
+    padding: var(--space-4) var(--space-3);
+    background: var(--surface);
+
+    ul {
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    a {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@include bp.up(md) {
+  .bar {
+    flex-wrap: nowrap;
+  }
+
+  .brand {
+    margin-inline-end: 0;
+  }
+
+  .nav {
+    margin-inline-start: auto;
+  }
+
+  :host-context(.js) {
+    .menu-toggle {
+      display: none;
+    }
+
+    .nav,
+    .menu-open .nav {
+      display: block;
+      position: static;
+      padding: 0;
+      background: none;
+
+      ul {
+        flex-direction: row;
+      }
+
+      a {
+        font-size: inherit;
+      }
+    }
+  }
+}

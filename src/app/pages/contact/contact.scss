@@ -1,0 +1,102 @@
+@use 'styles/breakpoints' as bp;
+
+h1 {
+  margin-block: var(--space-6) 0;
+}
+
+.intro {
+  color: var(--text-muted);
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-5);
+  margin-block: var(--space-4) var(--space-6);
+
+  @include bp.up(md) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+form {
+  display: grid;
+  gap: var(--space-3);
+  max-inline-size: 40rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.25rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+.optional {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+input,
+textarea {
+  min-block-size: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+
+  &[aria-invalid='true'] {
+    border-color: var(--danger, #b91c1c);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  justify-self: start;
+}
+
+.error {
+  margin: 0;
+  color: var(--danger, #b91c1c);
+  font-size: var(--fs-small);
+}
+
+.ok {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.status:focus {
+  outline: none;
+}
+
+// Off-screen rather than display:none so naive bots still fill it.
+.honeypot {
+  position: absolute;
+  inset-inline-start: -10000px;
+}
+
+aside h2 {
+  margin-block-start: 0;
+  font-size: var(--fs-h3);
+}
+
+.links {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-wrap: anywhere;
+}

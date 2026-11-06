@@ -1,0 +1,58 @@
+<h1>Writing</h1>
+<p class="intro">Notes from learning and teaching — Angular, RxJS, React, CSS.</p>
+
+<app-section heading="Featured posts" headingId="featured-posts">
+  <ul class="cards">
+    @for (p of featured(); track p.url) {
+      <li>
+        <article class="card">
+          <h3>
+            <a [href]="p.url" target="_blank" rel="noopener">{{ p.title }}<span class="visually-hidden"> (opens in new tab)</span></a>
+          </h3>
+          <p class="date"><time [attr.datetime]="p.date">{{ month(p.date) }}</time></p>
+          @if (p.summary) {
+            <p>{{ p.summary }}</p>
+          }
+          <ul class="chips" aria-label="Tags">
+            @for (t of p.tags; track t) {
+              <li><app-chip>{{ t }}</app-chip></li>
+            }
+          </ul>
+          <p class="read" aria-hidden="true">Read on WordPress ↗</p>
+        </article>
+      </li>
+    }
+  </ul>
+</app-section>
+
+<app-section heading="Series: React fundamentals" headingId="series">
+  <article class="card series">
+    <p>
+      {{ series().length }} short posts, {{ seriesRange() }} — from JSX and components to hooks like useReducer, useRef and
+      useCallback.
+    </p>
+    <ol class="series-list">
+      @for (p of series(); track p.url) {
+        <li><a [href]="p.url" target="_blank" rel="noopener">{{ p.title }}<span class="visually-hidden"> (opens in new tab)</span></a></li>
+      }
+    </ol>
+    <p><a [href]="reactCategory" target="_blank" rel="noopener">All React posts ↗<span class="visually-hidden"> (opens in new tab)</span></a></p>
+  </article>
+</app-section>
+
+<app-section heading="More posts" headingId="more-posts">
+  <ul class="more">
+    @for (p of more(); track p.url) {
+      <li>
+        <a [href]="p.url" target="_blank" rel="noopener">{{ p.title }}<span class="visually-hidden"> (opens in new tab)</span></a>
+        <time class="date" [attr.datetime]="p.date">{{ month(p.date) }}</time>
+      </li>
+    }
+  </ul>
+</app-section>
+
+@if (blog) {
+  <p class="blog">
+    <a [href]="blog" target="_blank" rel="noopener">Visit the full blog ↗<span class="visually-hidden"> (opens in new tab)</span></a>
+  </p>
+}

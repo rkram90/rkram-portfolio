@@ -1,0 +1,71 @@
+<div class="timeline">
+  <div class="track" aria-hidden="true">
+    <div class="fill"></div>
+    <div class="marker">
+      <img ngSrc="/images/profile-photo-96.webp" width="44" height="44" alt="" />
+    </div>
+  </div>
+
+  <ol #list class="rows">
+    @for (employer of employers(); track employer.id) {
+      <li class="row">
+        <div class="meta">
+          <h2>{{ employer.company }}</h2>
+          <p class="dates">
+            <time [attr.datetime]="employer.start">{{ employer.start | ymRange: employer.end : { yearsOnly: true } }}</time>
+            · {{ employer.start | duration: employer.end }}
+          </p>
+          <p class="location">{{ employer.location }}</p>
+        </div>
+
+        <span class="node" aria-hidden="true"></span>
+
+        <div class="body">
+          <ul class="titles">
+            @for (t of employer.titles; track t.title) {
+              <li>
+                <h3>{{ t.title }}</h3>
+                <span class="muted">{{ t.start | ymRange: t.end }}</span>
+              </li>
+            }
+          </ul>
+
+          @if (employer.engagements; as engagements) {
+            @for (e of engagements; track e.id; let first = $first) {
+              <details class="engagement" [open]="first">
+                <summary>
+                  <span class="name">{{ e.name }}</span>
+                  <span class="muted">{{ e.client }} · <time [attr.datetime]="e.start">{{ e.start | ymRange: e.end }}</time></span>
+                </summary>
+                @if (e.roles.length > 1) {
+                  <p class="roles">
+                    @for (r of e.roles; track r.title; let last = $last) {
+                      {{ r.title }} ({{ r.start | ymRange: r.end }}){{ last ? '' : ' → ' }}
+                    }
+                  </p>
+                }
+                <p>{{ e.summary }}</p>
+                <ul>
+                  @for (h of e.highlights; track h) {
+                    <li>{{ h }}</li>
+                  }
+                </ul>
+                <ul class="chips" aria-label="Tech used">
+                  @for (t of e.tech; track t) {
+                    <li><app-chip [version]="e.versions?.[t]">{{ t }}</app-chip></li>
+                  }
+                </ul>
+              </details>
+            }
+          } @else if (employer.highlights) {
+            <ul>
+              @for (h of employer.highlights; track h) {
+                <li>{{ h }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </li>
+    }
+  </ol>
+</div>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ramkumar Karuppaiah — Technology Lead &amp; Angular Specialist</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technology Lead and Angular specialist building enterprise front-ends with .NET and Node.js.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B1120" media="(prefers-color-scheme: dark)">
+  <!-- Sets the theme before first paint to avoid a flash (see docs 01). Keep in sync with Theme service. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        root.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

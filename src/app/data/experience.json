@@ -1,0 +1,148 @@
+[
+  {
+    "id": "infosys",
+    "company": "Infosys",
+    "location": "Chennai, India",
+    "start": "2018-02",
+    "end": null,
+    "titles": [
+      { "title": "Technology Lead", "start": "2022-01", "end": null },
+      { "title": "Technology Analyst", "start": "2018-02", "end": "2021-12" }
+    ],
+    "engagements": [
+      {
+        "id": "reservations-platform",
+        "name": "Airline Reservations Platform",
+        "client": "A major US airline",
+        "roles": [{ "title": "Technology Lead", "start": "2025-05", "end": null }],
+        "start": "2025-05",
+        "end": null,
+        "summary": "Modern front end that replaces a legacy reservation system for call-center agents.",
+        "highlights": [
+          "Led the federal excise tax module end to end, covering domestic ancillary purchases such as unaccompanied-minor fees, mileage purchases and bundles.",
+          "Led the digital menus feature that lets agents personalize meals for upcoming flights.",
+          "Led an onshore/offshore team from analysis to release, plus production support."
+        ],
+        "tech": ["Angular", "Angular Material", "RxJS", ".NET", "Docker", "AWS", "xUnit", "Vitest", "Cypress", "Dynatrace"],
+        "versions": { "Angular": "19", ".NET": "8" },
+        "projectSlug": "reservations-platform"
+      },
+      {
+        "id": "fare-automation",
+        "name": "Airline Fare Automation Platform",
+        "client": "A major US airline",
+        "roles": [{ "title": "Technology Lead", "start": "2024-05", "end": "2025-04" }],
+        "start": "2024-05",
+        "end": "2025-04",
+        "summary": "Self-service fare calculation based on industry fare standards, with faster and more accurate responses.",
+        "highlights": [
+          "Queried S3 Parquet data with DuckDB and rendered it in AG-Grid.",
+          "Added real-time notifications with SignalR, plus event-driven AWS workflows.",
+          "Reached 90% Angular code coverage behind SonarQube quality gates."
+        ],
+        "tech": ["Angular", "NgRx", "AG-Grid", "SignalR", "DuckDB", "AWS", "Python", ".NET", "SonarQube", "Datadog", "Dynatrace"],
+        "versions": { "Angular": "16" },
+        "projectSlug": "fare-automation"
+      },
+      {
+        "id": "telecom-microfrontends",
+        "name": "Telecom Platform Modernization",
+        "client": "A European telecom provider",
+        "roles": [{ "title": "Technology Lead", "start": "2023-01", "end": "2024-04" }],
+        "start": "2023-01",
+        "end": "2024-04",
+        "summary": "Brought an acquired brand's app into the provider's central IT platform for scalability, security and efficiency.",
+        "highlights": [
+          "Built a micro-frontend architecture of independently deployable apps with Webpack Module Federation.",
+          "Integrated GraphQL APIs and Magnolia CMS content."
+        ],
+        "tech": ["Angular", "Webpack Module Federation", "GraphQL", "Node.js", "Spring Boot", "Magnolia", "Splunk"],
+        "versions": { "Angular": "14" },
+        "projectSlug": "telecom-microfrontends"
+      },
+      {
+        "id": "telecom-self-service",
+        "name": "Telecom Customer Self-Service Portal",
+        "client": "A US wireless carrier",
+        "roles": [
+          { "title": "Technology Analyst", "start": "2020-03", "end": "2021-12" },
+          { "title": "Technology Lead", "start": "2022-01", "end": "2022-12" }
+        ],
+        "start": "2020-03",
+        "end": "2022-12",
+        "summary": "Portal where customers check usage and billing, change plans, chat and shop.",
+        "highlights": [
+          "Integrated AEM components with Angular components.",
+          "Built a Hapi.js backend-for-frontend that shapes external REST data for the UI.",
+          "Ran code reviews for the front-end team."
+        ],
+        "tech": ["Angular", "Angular Material", "Nx", "NgRx", "AEM", "Hapi.js", "GitLab CI/CD", "Docker"],
+        "versions": { "Angular": "11", "AEM": "6.5" },
+        "projectSlug": "telecom-self-service"
+      },
+      {
+        "id": "venue-booking",
+        "name": "Venue Booking App",
+        "client": "A US media & cable company",
+        "roles": [{ "title": "Technology Analyst", "start": "2019-11", "end": "2020-02" }],
+        "start": "2019-11",
+        "end": "2020-02",
+        "summary": "Ticket booking for programs at the company's technology center.",
+        "highlights": [
+          "Built individual and group booking with calendar time slots, QR codes and a My Bookings view.",
+          "Added multilingual support and consent-management integration."
+        ],
+        "tech": ["Angular", "SASS", "Jasmine", "Node.js", "AWS", "Jenkins"],
+        "versions": { "Angular": "8" },
+        "projectSlug": "venue-booking"
+      },
+      {
+        "id": "b2b-account-portal",
+        "name": "B2B Account Portal",
+        "client": "A US wireless carrier",
+        "roles": [{ "title": "Technology Analyst", "start": "2018-02", "end": "2019-10" }],
+        "start": "2018-02",
+        "end": "2019-10",
+        "summary": "Self-service portal where business customers manage user profiles, billing, payments and orders.",
+        "highlights": [
+          "Produced high- and low-level designs, prototypes and design reviews.",
+          "Built accessibility-compliant pages and supported the go-live plan."
+        ],
+        "tech": ["Angular", "TypeScript", "HTML", "SASS"]
+      }
+    ]
+  },
+  {
+    "id": "tychons",
+    "company": "Tychons Solution",
+    "location": "Chennai, India",
+    "start": "2016-01",
+    "end": "2017-11",
+    "titles": [{ "title": "Programmer Analyst", "start": "2016-01", "end": "2017-11" }],
+    "highlights": [
+      "Turned static HTML into dynamic sites with Magento, WordPress and CodeIgniter.",
+      "Tested and deployed code to Apache and Nginx web servers."
+    ]
+  },
+  {
+    "id": "indiaproperty",
+    "company": "IndiaProperty Online",
+    "location": "Chennai, India",
+    "start": "2014-03",
+    "end": "2015-12",
+    "titles": [{ "title": "Software Engineer", "start": "2014-03", "end": "2015-12" }],
+    "highlights": [
+      "Built core libraries for mailer template generation and search.",
+      "Made the home module faster and more reliable."
+    ]
+  },
+  {
+    "id": "spider-infomedia",
+    "company": "Spider Infomedia",
+    "location": "Chennai, India",
+    "start": "2013-01",
+    "end": "2014-03",
+    "titles": [{ "title": "PHP Developer", "start": "2013-01", "end": "2014-03" }],
+    "highlights": ["Developed web applications with CodeIgniter and MySQL."]
+  }
+]

@@ -1,0 +1,224 @@
+[
+  {
+    "slug": "reservations-platform",
+    "title": "Airline Reservations Platform",
+    "type": "client",
+    "client": "A major US airline",
+    "role": "Technology Lead",
+    "start": "2025-05",
+    "end": null,
+    "tagline": "Modern, scalable front end replacing a legacy reservation system for call-center agents.",
+    "problem": "Call-center agents relied on a legacy reservation system; the airline needed a modern, scalable front end.",
+    "approach": [
+      "Led the federal excise tax module end to end, covering domestic ancillary purchases such as unaccompanied-minor fees, mileage purchases and bundles",
+      "Led the digital menus feature that lets agents personalize meals for upcoming flights",
+      "Led an onshore/offshore team from analysis to release",
+      "Ran production support with Dynatrace, Quantum Metric and Kibana"
+    ],
+    "outcomes": [
+      {
+        "text": "TODO: measurable outcome (agents served, release cadence, defect or handling-time change)"
+      }
+    ],
+    "tech": [
+      "Angular",
+      "Angular Material",
+      "RxJS",
+      ".NET",
+      "Docker",
+      "AWS",
+      "xUnit",
+      "Vitest",
+      "Cypress"
+    ],
+    "versions": {
+      "Angular": "19",
+      ".NET": "8"
+    },
+    "featured": true,
+    "order": 1
+  },
+  {
+    "slug": "fare-automation",
+    "title": "Fare Automation Platform",
+    "type": "client",
+    "client": "A major US airline",
+    "role": "Technology Lead",
+    "start": "2024-05",
+    "end": "2025-04",
+    "tagline": "Self-service, event-driven fare calculation on industry fare standards.",
+    "problem": "Fare calculation relied on manual, slow processes with limited flexibility for pricing analysts.",
+    "approach": [
+      "Built a real-time fare workflow UI with Angular 16, NgRx and AG-Grid",
+      "Pushed live processing status to users via SignalR",
+      "Queried Parquet files directly from S3 with DuckDB and streamed results into AG-Grid",
+      "Orchestrated processing with S3, EventBridge, Python Lambda, SNS and SQS"
+    ],
+    "outcomes": [
+      {
+        "metric": "90%",
+        "text": "Angular unit-test coverage, enforced with SonarQube quality gates"
+      },
+      {
+        "text": "Real-time instance notifications via SignalR replaced manual status checks"
+      }
+    ],
+    "tech": [
+      "Angular",
+      "NgRx",
+      "AG-Grid",
+      "SignalR",
+      "DuckDB",
+      "AWS",
+      ".NET",
+      "Python"
+    ],
+    "versions": {
+      "Angular": "16"
+    },
+    "featured": true,
+    "order": 2
+  },
+  {
+    "slug": "telecom-microfrontends",
+    "title": "Telecom Platform Modernization",
+    "type": "client",
+    "client": "A European telecom provider",
+    "role": "Technology Lead",
+    "start": "2023-01",
+    "end": "2024-04",
+    "tagline": "Micro-frontends that brought an acquired brand's app into the provider's central platform.",
+    "problem": "The provider needed to integrate an acquired brand's app into its central IT for scalability, security and efficiency.",
+    "approach": [
+      "Designed a micro-frontend architecture of independently deployable apps with Webpack Module Federation",
+      "Integrated GraphQL APIs and Magnolia CMS content",
+      "Monitored production with Splunk"
+    ],
+    "outcomes": [
+      {
+        "text": "TODO: measurable outcome (apps migrated, deploy frequency, load time)"
+      }
+    ],
+    "tech": [
+      "Angular",
+      "Webpack Module Federation",
+      "GraphQL",
+      "Node.js",
+      "Spring Boot",
+      "Magnolia",
+      "Splunk"
+    ],
+    "versions": {
+      "Angular": "14"
+    },
+    "featured": true,
+    "order": 3
+  },
+  {
+    "slug": "telecom-self-service",
+    "title": "Telecom Customer Self-Service Portal",
+    "type": "client",
+    "client": "A US wireless carrier",
+    "role": "Technology Analyst → Technology Lead",
+    "start": "2020-03",
+    "end": "2022-12",
+    "tagline": "Usage, billing, plan changes, chat and shopping in one customer portal.",
+    "problem": "Customers needed to check usage and billing, change plans, chat and shop online.",
+    "approach": [
+      "Integrated AEM components with Angular components",
+      "Built a Hapi.js backend-for-frontend that shapes external REST data for the UI",
+      "Ran code reviews for the front-end team"
+    ],
+    "outcomes": [
+      {
+        "text": "TODO: measurable outcome (customers served, features shipped)"
+      }
+    ],
+    "tech": [
+      "Angular",
+      "Angular Material",
+      "AEM",
+      "Nx",
+      "NgRx",
+      "Hapi.js",
+      "GitLab CI/CD",
+      "Docker"
+    ],
+    "versions": {
+      "Angular": "11",
+      "AEM": "6.5"
+    },
+    "featured": false,
+    "order": 4
+  },
+  {
+    "slug": "venue-booking",
+    "title": "Venue Booking App",
+    "type": "client",
+    "client": "A US media & cable company",
+    "role": "Technology Analyst",
+    "start": "2019-11",
+    "end": "2020-02",
+    "tagline": "Ticket booking for programs at a technology center, with QR codes and multilingual support.",
+    "problem": "The company needed ticket booking for programs at its technology center.",
+    "approach": [
+      "Built individual and group booking with calendar time slots",
+      "Added QR-code tickets and a My Bookings view",
+      "Added multilingual support and consent-management integration"
+    ],
+    "outcomes": [
+      {
+        "text": "TODO: measurable outcome (bookings, launch date met)"
+      }
+    ],
+    "tech": [
+      "Angular",
+      "SASS",
+      "Jasmine",
+      "Node.js",
+      "AWS",
+      "Jenkins"
+    ],
+    "versions": {
+      "Angular": "8"
+    },
+    "featured": false,
+    "order": 5
+  },
+  {
+    "slug": "portfolio-site",
+    "title": "This Portfolio Site",
+    "type": "personal",
+    "role": "Designer & developer",
+    "start": "2026-10",
+    "end": null,
+    "tagline": "Statically prerendered Angular 21 portfolio built with signals, zoneless change detection and data-driven content.",
+    "problem": "I needed one fast, accessible place to show my work that recruiters can scan in seconds and search engines can index.",
+    "approach": [
+      "Prerendered every route to static HTML with @angular/ssr for instant loads and SEO",
+      "Signals and zoneless change detection throughout, with OnPush standalone components",
+      "All content in JSON validated by zod schemas in unit tests, so the site, résumé and data stay consistent",
+      "Scroll-driven career timeline that respects reduced-motion preferences"
+    ],
+    "outcomes": [
+      {
+        "metric": "98%",
+        "text": "Unit-test statement coverage with Vitest"
+      },
+      {
+        "text": "Every page and case study ships as static HTML"
+      }
+    ],
+    "tech": [
+      "Angular",
+      "TypeScript",
+      "SASS",
+      "Vitest"
+    ],
+    "versions": {
+      "Angular": "21"
+    },
+    "featured": false,
+    "order": 6
+  }
+]
