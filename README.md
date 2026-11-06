@@ -1,6 +1,6 @@
 # rkram-portfolio
 
-Static Angular portfolio for Ramkumar Karuppaiah — prerendered, no backend. Design, content and page specs live in [`../portfolio-plan`](../portfolio-plan/README.md).
+Static Angular portfolio for Ramkumar Karuppaiah — prerendered, no backend. 
 
 Developer conventions and test how-to: [`DEVELOPER_GUIDE.md`](DEVELOPER_GUIDE.md).
 
